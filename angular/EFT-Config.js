@@ -1,7 +1,7 @@
 /**
  * ButtonHook to run before the posTenderTake and posTenderGive events
  * Checks the tender type and if credit, debit or gift runs through EFT provider
- * otherwise returns control to Credit
+ * otherwise returns control to Base Credit Transaction
  */
 ButtonHooksManager.addHandler(['before_posTenderTake','before_posTenderGive'],
   function($q, $modal, $resource, DocumentPersistedData, CreditUtilities, NotificationService, Templates, ModelService, CreditSessionInfo, eftService, CreditCardTypes, $timeout, $http, TenderTypes, PrintersService,ShopperDisplay,ResourceNotificationService,$translate,$state, ExternalDataService) {
